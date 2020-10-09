@@ -1,10 +1,14 @@
-const ourAsyncFunc = () => {
+const ourAsyncFunc = async () => {
 	console.log("1. We are Borg");
-	setTimeout(() => {
-		console.log("2. You will be assimilated!");
-	}, 2000);
+	//use of async await to resolve a promise for synchronous execution
+	await new Promise((resolve) => {
+		setTimeout(() => {
+			resolve(console.log("2. You will be assimilated!"));
+		}, 2000);
+	});
+
 	console.log("3. Resistance is futile!");
-}
+};
 
 
 ourAsyncFunc();
@@ -13,7 +17,7 @@ ourAsyncFunc();
 
 
 // Do not edit below this line
-/* 
+/*
 	* When you run this code, you will see the following printed:
 		1. We are Borg
 		3. Resistance is futile!
