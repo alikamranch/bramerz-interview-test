@@ -10,11 +10,11 @@ class Test {
 }
 
 const displayProducts = () => {
-	// console.log('products', products);
+	console.log('products', products);
 };
 
 const displayCart = () => {
-	// console.log('cart', cart);
+	console.log('cart', cart);
 };
 
 //======Step 1 start======
